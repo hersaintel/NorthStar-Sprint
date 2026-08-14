@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Northstar Retail Co. — quality apparel and goods with fast shipping and hassle-free returns.">
+  <link rel="stylesheet" href="widgetUI/style.css">
   <title>Northstar Retail Co. | Online Store</title>
   <style>
     /* Modern Reset & Font Setup */
@@ -299,15 +300,33 @@
     <p>&copy; Northstar Retail Co. MVP Demo — Sprint Project</p>
   </footer>
 
-  <!-- ===================================================
-       CONTAINER WHERE NETSANET'S WIDGET (TASK 6) ATTACHES
-       =================================================== -->
-  <div id="support-widget-root">
-    <!-- Placeholder badge until Task 11 embed is done -->
-    <button type="button" class="widget-placeholder" id="widget-launcher" aria-label="Open support chat">
-      💬 Need Help? Chat with us
-    </button>
-  </div>
+  
+  <div id="chatbot-container"></div>
 
+  <script>
+      async function loadChatbot() {
+          try {
+              // 1. The exact name of your chatbot subfolder (include the trailing slash)
+              const folderPath = 'widgetUI/'; 
+  
+              // 2. Fetch and inject the chatbot HTML markup
+              const response = await fetch(`${folderPath}index.html`); // Use the exact name of your chatbot file
+              if (!response.ok) throw new Error('Could not load chatbot HTML markup');
+              
+              const htmlText = await response.text();
+              document.getElementById('chatbot-container').innerHTML = htmlText;
+  
+              // 4. FORCE LOAD THE JS
+              const chatbotJS = document.createElement('script');
+              chatbotJS.src = `${folderPath}script.js`; // Becomes widgetUI/script.js
+              document.body.appendChild(chatbotJS);
+  
+          } catch (error) {
+              console.error('Error integrating chatbot:', error);
+          }
+      }
+  
+      window.addEventListener('DOMContentLoaded', loadChatbot);
+  </script>
 </body>
 </html>

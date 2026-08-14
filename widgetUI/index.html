@@ -1,0 +1,37 @@
+<div class="chat-widget-container">
+  <!-- Popup Chat Window -->
+  <div class="chat-popup" id="chatPopup">
+    <div class="chat-header">
+      <div class="chat-bot-info">
+        <span class="bot-avatar">🤖</span>
+        <div>
+          <h4>Support Assistant</h4>
+          <span class="status-online">Online</span>
+        </div>
+      </div>
+      <button class="close-btn" id="closeBtn">&times;</button>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+      <div class="message bot-message">
+        Hi there! 👋 What can we help you with today?
+        <ol>
+          <li>order status</li>
+          <li>refund/return</li>
+          <li>stock</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="chat-footer">
+      <input type="text" id="chatInput" placeholder="Type a message..." />
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <!-- Floating Trigger Button -->
+  <button class="chat-trigger-btn" id="chatTrigger">
+    <span class="bot-icon">🤖</span>
+    <span class="trigger-text">Support</span>
+  </button>
+</div>

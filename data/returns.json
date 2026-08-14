@@ -1,0 +1,30 @@
+{
+  "policies": {
+    "general": "Items can be returned within 30 days of delivery if unused and in original packaging.",
+    "electronics": "Electronics can be returned within 14 days of delivery, unopened, for a full refund. Opened electronics are eligible for exchange only.",
+    "clothingFootwear": "Clothing and footwear can be returned within 30 days if unworn with tags attached.",
+    "furniture": "Furniture returns are accepted within 7 days of delivery. Customer covers return shipping unless the item arrived damaged.",
+    "finalSale": "Items marked 'Final Sale' at purchase cannot be returned or refunded."
+  },
+  "returnReasons": [
+    { "reasonCode": "wrong-item", "label": "Received the wrong item", "resolution": "Full refund or replacement, free return shipping." },
+    { "reasonCode": "damaged", "label": "Item arrived damaged", "resolution": "Full refund or replacement, free return shipping, no need to return the damaged item unless requested." },
+    { "reasonCode": "not-as-described", "label": "Item not as described", "resolution": "Full refund, free return shipping." },
+    { "reasonCode": "changed-mind", "label": "Changed my mind / no longer needed", "resolution": "Refund minus return shipping cost, subject to category policy above." },
+    { "reasonCode": "wrong-size", "label": "Wrong size or fit", "resolution": "Free exchange or refund, subject to category policy above." },
+    { "reasonCode": "late-arrival", "label": "Arrived too late", "resolution": "Full refund, free return shipping if item is unopened." }
+  ],
+  "sampleCases": [
+    { "caseId": "RT-2001", "orderId": "NS-1001", "reasonCode": "wrong-size", "status": "Approved", "refundAmount": 2500 },
+    { "caseId": "RT-2002", "orderId": "NS-1005", "reasonCode": "damaged", "status": "Approved", "refundAmount": 1800 },
+    { "caseId": "RT-2003", "orderId": "NS-1009", "reasonCode": "changed-mind", "status": "Approved", "refundAmount": 4200 },
+    { "caseId": "RT-2004", "orderId": "NS-1014", "reasonCode": "wrong-item", "status": "Pending Review", "refundAmount": null },
+    { "caseId": "RT-2005", "orderId": "NS-1016", "reasonCode": "not-as-described", "status": "Rejected", "refundAmount": null, "rejectionNote": "Item marked Final Sale at time of purchase." },
+    { "caseId": "RT-2006", "orderId": "NS-1002", "reasonCode": "late-arrival", "status": "Approved", "refundAmount": 3600 },
+    { "caseId": "RT-2007", "orderId": "NS-1011", "reasonCode": "wrong-size", "status": "Pending Review", "refundAmount": null },
+    { "caseId": "RT-2008", "orderId": "NS-1006", "reasonCode": "changed-mind", "status": "Approved", "refundAmount": 2900 },
+    { "caseId": "RT-2009", "orderId": "NS-1015", "reasonCode": "damaged", "status": "Approved", "refundAmount": 1500 },
+    { "caseId": "RT-2010", "orderId": "NS-1007", "reasonCode": "wrong-item", "status": "Approved", "refundAmount": 3300 }
+  ],
+  "notFoundMessage": "We couldn't find a return case with that order ID or case ID. You can start a new return request or contact support directly."
+}

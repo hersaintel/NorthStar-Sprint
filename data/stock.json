@@ -1,0 +1,13 @@
+{
+"products": [
+    { "name": "Wireless Earbuds", "stock": 12 },
+    { "name": "Running Shoes - Size 42", "stock": 5 },
+    { "name": "Bluetooth Speaker", "stock": 0 },
+    { "name": "Office Chair", "stock": 3 },
+    { "name": "Laptop Stand", "stock": 8 },
+    { "name": "Desk Lamp", "stock": 0 },
+    { "name": "Yoga Mat", "stock": 14 },
+    { "name": "Coffee Maker", "stock": 4 }
+],
+"outOfStockMessage": "is currently out of stock."
+}

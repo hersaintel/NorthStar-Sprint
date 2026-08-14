@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Northstar Retail Co. — quality apparel and goods with fast shipping and hassle-free returns.">
+  <title>Northstar Retail Co. | Online Store</title>
+  <style>
+    /* Modern Reset & Font Setup */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #212529;
+      line-height: 1.6;
+    }
+
+    /* Header Navigation */
+    header {
+      background-color: #111827;
+      color: #ffffff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #3b82f6;
+    }
+
+    .logo span {
+      color: #ffffff;
+    }
+
+    nav a {
+      color: #d1d5db;
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      color: #ffffff;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+    }
+
+    /* Main Container & Layout */
+    .container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.2rem;
+      color: #1f2937;
+    }
+
+    /* Products Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      padding: 1.25rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-image-placeholder {
+      width: 100%;
+      height: 160px;
+      background-color: #f3f4f6;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #9ca3af;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .product-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .product-price {
+      color: #2563eb;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .btn-buy {
+      background-color: #111827;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: 500;
+    }
+
+    .btn-buy:hover,
+    .btn-buy:focus-visible {
+      background-color: #1f2937;
+    }
+
+    /* Support / Info Banner */
+    .info-banner {
+      background-color: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 1.25rem;
+      border-radius: 4px;
+      margin-bottom: 3rem;
+    }
+
+    .info-banner h3 {
+      color: #1e40af;
+      margin-bottom: 0.25rem;
+    }
+
+    .info-banner p {
+      color: #1e3a8a;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #6b7280;
+      font-size: 0.875rem;
+      border-top: 1px solid #e5e7eb;
+      background-color: #ffffff;
+    }
+
+    /* ===================================================
+       WIDGET HOST CONTAINER (Reserved for Tasks 6 & 11)
+       =================================================== */
+    #support-widget-root {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    .widget-placeholder {
+      background-color: #2563eb;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      font-family: inherit;
+    }
+
+    .widget-placeholder:focus-visible {
+      outline: 3px solid #93c5fd;
+      outline-offset: 2px;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">NORTHSTAR <span>RETAIL</span></div>
+    <nav aria-label="Main navigation">
+      <a href="#shop">Shop</a>
+      <a href="#">Categories</a>
+      <a href="#">Track Orders</a>
+      <a href="#">Support</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Quality Apparel & Goods</h1>
+    <p>Fast shipping. Hassle-free returns.</p>
+  </div>
+
+  <!-- Main Content Container -->
+  <div class="container">
+
+    <!-- Support Notification Banner -->
+    <div class="info-banner">
+      <h3>Need Help With an Existing Order?</h3>
+      <p>Use our automated virtual assistant in the bottom right corner to instantly track orders, check stock, or process returns!</p>
+    </div>
+
+    <!-- Featured Products -->
+    <h2 class="section-title" id="shop">Featured Products</h2>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-image-placeholder">Outerwear</div>
+        <div class="product-title">Everyday Hoodie</div>
+        <div class="product-price">$59.99</div>
+        <button type="button" class="btn-buy">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-placeholder">Footwear</div>
+        <div class="product-title">Urban Runners</div>
+        <div class="product-price">$89.99</div>
+        <button type="button" class="btn-buy">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-placeholder">Accessories</div>
+        <div class="product-title">Canvas Backpack</div>
+        <div class="product-price">$45.00</div>
+        <button type="button" class="btn-buy">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image-placeholder">Apparel</div>
+        <div class="product-title">Classic Tee</div>
+        <div class="product-price">$24.99</div>
+        <button type="button" class="btn-buy">Add to Cart</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; Northstar Retail Co. MVP Demo — Sprint Project</p>
+  </footer>
+
+  <!-- ===================================================
+       CONTAINER WHERE NETSANET'S WIDGET (TASK 6) ATTACHES
+       =================================================== -->
+  <div id="support-widget-root">
+    <!-- Placeholder badge until Task 11 embed is done -->
+    <button type="button" class="widget-placeholder" id="widget-launcher" aria-label="Open support chat">
+      💬 Need Help? Chat with us
+    </button>
+  </div>
+
+</body>
+</html>

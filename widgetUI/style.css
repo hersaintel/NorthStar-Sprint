@@ -1,0 +1,196 @@
+/* Container positioned at bottom-right */
+.chat-widget-container {
+  position: fixed;
+  bottom: 10%;
+  right: 40%;
+  z-index: 9999;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Floating Trigger Button */
+.chat-trigger-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #2563eb; /* Primary accent */
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 9999px; /* Pill shape */
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.chat-trigger-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.bot-icon {
+  font-size: 18px;
+}
+
+/* Popup Chat Box */
+.chat-popup {
+  position: absolute;
+  bottom: 64px; /* Sits right above the trigger button */
+  right: 0;
+  width: 360px;
+  height: 480px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  /* Hidden state with scale & fade transition */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px) scale(0.95);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Visible state */
+.chat-popup.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+/* Header */
+.chat-header {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-bot-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bot-avatar {
+  font-size: 22px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.chat-bot-info h4 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.status-online {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Body / Message Area */
+.chat-body {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background-color: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.bot-message {
+  background-color: #e2e8f0;
+  color: #1e293b;
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+}
+
+.user-message {
+  background-color: #2563eb;
+  color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+
+/* Footer / Input Area */
+.chat-footer {
+  padding: 12px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  gap: 8px;
+}
+
+.chat-footer input {
+  flex: 1;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 8px 12px;
+  outline: none;
+}
+
+.chat-footer button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* =========================================================================
+   ADDED FOR TASK 7 — button-menu component styling.
+   Kept in the same visual language as the rest of this file
+   (same blue accent #2563eb, same radius/spacing scale).
+   ========================================================================= */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-self: flex-start;
+  max-width: 100%;
+}
+
+.menu button {
+  background: #ffffff;
+  border: 1px solid #2563eb;
+  color: #2563eb;
+  padding: 8px 12px;
+  border-radius: 9999px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.menu button:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.menu button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

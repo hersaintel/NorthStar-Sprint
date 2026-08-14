@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chat Widget App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="chat-widget-container">
+  <!-- Popup Chat Window -->
+  <div class="chat-popup" id="chatPopup">
+    <div class="chat-header">
+      <div class="chat-bot-info">
+        <span class="bot-avatar">🤖</span>
+        <div>
+          <h4>Support Assistant</h4>
+          <span class="status-online">Online</span>
+        </div>
+      </div>
+      <button class="close-btn" id="closeBtn">&times;</button>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+      <!-- Task 7/8 script.js populates this with the guided button menu -->
+    </div>
+
+    <div class="chat-footer">
+      <input type="text" id="chatInput" placeholder="Type a message..." />
+      <button id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <!-- Floating Trigger Button -->
+  <button class="chat-trigger-btn" id="chatTrigger">
+    <span class="bot-icon">🤖</span>
+    <span class="trigger-text">Support</span>
+  </button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

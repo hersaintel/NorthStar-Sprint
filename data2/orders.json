@@ -1,0 +1,22 @@
+{
+  "orders": [
+    { "orderId": "NS-1001", "customerName": "A. Otieno", "status": "Delivered", "eta": null, "items": ["Wireless Earbuds"], "lastUpdated": "2026-08-05" },
+    { "orderId": "NS-1002", "customerName": "B. Kimani", "status": "Shipped", "eta": "2026-08-14", "items": ["Running Shoes - Size 42"], "lastUpdated": "2026-08-10" },
+    { "orderId": "NS-1003", "customerName": "C. Wanjiru", "status": "Processing", "eta": "2026-08-16", "items": ["Bluetooth Speaker"], "lastUpdated": "2026-08-11" },
+    { "orderId": "NS-1004", "customerName": "D. Mutua", "status": "Delayed", "eta": "2026-08-20", "items": ["Office Chair"], "lastUpdated": "2026-08-10" },
+    { "orderId": "NS-1005", "customerName": "E. Njoroge", "status": "Delivered", "eta": null, "items": ["Phone Case", "Screen Protector"], "lastUpdated": "2026-08-03" },
+    { "orderId": "NS-1006", "customerName": "F. Achieng", "status": "Cancelled", "eta": null, "items": ["Backpack"], "lastUpdated": "2026-08-07" },
+    { "orderId": "NS-1007", "customerName": "G. Mwangi", "status": "Shipped", "eta": "2026-08-13", "items": ["Laptop Stand"], "lastUpdated": "2026-08-09" },
+    { "orderId": "NS-1008", "customerName": "H. Chebet", "status": "Processing", "eta": "2026-08-17", "items": ["Desk Lamp"], "lastUpdated": "2026-08-11" },
+    { "orderId": "NS-1009", "customerName": "I. Odhiambo", "status": "Delivered", "eta": null, "items": ["Kitchen Blender"], "lastUpdated": "2026-08-01" },
+    { "orderId": "NS-1010", "customerName": "J. Wafula", "status": "Out for Delivery", "eta": "2026-08-12", "items": ["Yoga Mat"], "lastUpdated": "2026-08-12" },
+    { "orderId": "NS-1011", "customerName": "K. Nyambura", "status": "Shipped", "eta": "2026-08-15", "items": ["Wall Clock"], "lastUpdated": "2026-08-10" },
+    { "orderId": "NS-1012", "customerName": "L. Barasa", "status": "Delayed", "eta": "2026-08-22", "items": ["Standing Desk"], "lastUpdated": "2026-08-09" },
+    { "orderId": "NS-1013", "customerName": "M. Cherono", "status": "Processing", "eta": "2026-08-18", "items": ["Coffee Maker"], "lastUpdated": "2026-08-11" },
+    { "orderId": "NS-1014", "customerName": "N. Kiptoo", "status": "Delivered", "eta": null, "items": ["Notebook Set"], "lastUpdated": "2026-08-04" },
+    { "orderId": "NS-1015", "customerName": "O. Adhiambo", "status": "Shipped", "eta": "2026-08-14", "items": ["Table Lamp", "Extension Cord"], "lastUpdated": "2026-08-10" },
+    { "orderId": "NS-1016", "customerName": "P. Wekesa", "status": "Cancelled", "eta": null, "items": ["Bluetooth Headphones"], "lastUpdated": "2026-08-06" }
+  ],
+  "possibleStatuses": ["Processing", "Shipped", "Out for Delivery", "Delivered", "Delayed", "Cancelled"],
+  "notFoundMessage": "We couldn't find an order with that ID. Please double-check and try again, or contact support directly."
+}

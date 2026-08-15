@@ -7,10 +7,10 @@ Support ticket deflection MVP for **Northstar Retail Co.** — built over a 5-da
 | Person | Primary Area | Backup Area |
 |---|---|---|
 | Brian Nyakundi | Flow map, storefront page, widget embed | Testing |
-| Maina Kennedy | Orders + returns datasets, E2E testing | Flow map |
-| Netsanet Admasu | Stock dataset, widget shell (UI) | Datasets |
-| Zaweria Wairimu | Button-menu component, Order Status logic | Widget shell |
-| Collins Lagat | Returns + Stock Availability logic | Testing |
+| Maina Kennedy | Logic embedding, E2E testing | Flow map |
+| Netsanet Admasu | Widget shell (UI) | Dataset |
+| Zaweria Wairimu | Button-menu component, Order Status logic | Frontend |
+| Collins Lagat | Returns + Stock Availability + Order dataset | Dataset |
 
 ## Project Overview
 
@@ -84,4 +84,3 @@ Tracked on [GitHub Projects](../../projects) — every task is an issue with an 
 ## License
 
 Internal project — for course/evaluation purposes only.
-# NorthStar-Sprint

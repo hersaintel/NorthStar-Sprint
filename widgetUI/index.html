@@ -1,37 +1,19 @@
-<div class="chat-widget-container">
-  <!-- Popup Chat Window -->
-  <div class="chat-popup" id="chatPopup">
-    <div class="chat-header">
-      <div class="chat-bot-info">
-        <span class="bot-avatar">🤖</span>
-        <div>
-          <h4>Support Assistant</h4>
-          <span class="status-online">Online</span>
-        </div>
-      </div>
-      <button class="close-btn" id="closeBtn">&times;</button>
-    </div>
+<div id="chatbot-widget-root">
 
-    <div class="chat-body" id="chatBody">
-      <div class="message bot-message">
-        Hi there! 👋 What can we help you with today?
-        <ol>
-          <li>order status</li>
-          <li>refund/return</li>
-          <li>stock</li>
-        </ol>
-      </div>
+  <div class="chat-panel" id="chatPopup" role="dialog" aria-label="Store Assistant chat" aria-hidden="true">
+    <div class="widget-header">
+      <span class="dot"></span>Store Assistant
+      <button type="button" id="closeBtn" class="chat-close-btn" aria-label="Close chat">✕</button>
     </div>
-
-    <div class="chat-footer">
-      <input type="text" id="chatInput" placeholder="Type a message..." />
-      <button id="sendBtn">Send</button>
+    <div id="chatBody"></div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Type a message..." autocomplete="off">
+      <button type="button" id="sendBtn">Send</button>
     </div>
   </div>
 
-  <!-- Floating Trigger Button -->
-  <button class="chat-trigger-btn" id="chatTrigger">
-    <span class="bot-icon">🤖</span>
-    <span class="trigger-text">Support</span>
+  <button type="button" id="chatTrigger" class="chat-toggle-btn" aria-label="Open support chat" aria-expanded="false">
+    💬 Support
   </button>
+
 </div>
